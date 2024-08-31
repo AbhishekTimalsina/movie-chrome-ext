@@ -1,7 +1,7 @@
 import MovieCard from "../components/movieCard";
 import { Link } from "react-router-dom";
 
-export default function Favourites({ fav }) {
+export default function Favourites({ fav, setFavourite }) {
   let favourites = fav;
   return (
     <>
@@ -17,7 +17,7 @@ export default function Favourites({ fav }) {
                 key={mv.id}
                 movieData={mv}
                 favourite={fav}
-                setFavourite={() => console.log("hello")}
+                setFavourite={setFavourite}
               />
             );
           })
